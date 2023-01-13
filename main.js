@@ -21,6 +21,9 @@ const empezar = document.getElementById('empezar') //boton de empezar
 const continuar = document.getElementById('continuar') //boton de continuar
 const contenedor = document.querySelector('#contenedor') //div que contiene las cartas
 const template = document.querySelector('template').content.cloneNode(true) //contiene clon de contenido de plantilla
+function pausar(){
+    pista.pause();
+    }
 
 //ciclo que sortea de manera aleatoria el arreglo de las cartas 
 for (i = 15; i >= 0; i--) {
