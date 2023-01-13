@@ -289,9 +289,9 @@ Technologic University of Pereira
 
 
 
-.introduccion__btnComenzar,
-.introduccion_btnContinuar,
-.footer__reiniciar {
+.introduccion_btnComenzar,
+.introduccion_btnContinuar {
+  border: 1px;
   animation: bounceIn 1.5s backwards;
   --btnComenzar__color: white;
   --btnComenzar__colorFondo: #ED921F;
