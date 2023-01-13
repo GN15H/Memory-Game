@@ -230,6 +230,14 @@ Technologic University of Pereira
     0 2px 0 1px var(--btnComenzar__colorSombra),
     0 0px 0 1px var(--btnComenzar__colorSombra);
 }
+.introduccion__btnComenzar:active,
+.introduccion_btnContinuar:active{
+  top: 2px;
+  -webkit-box-shadow: 0 2px 0 1px var(--btnComenzar__colorSombra),
+    0 0px 0 1px var(--btnComenzar__colorSombra);
+  box-shadow: 0 2px 0 1px var(--btnComenzar__colorSombra),
+    0 0px 0 1px var(--btnComenzar__colorSombra);
+}
 
 /*Por ahora*/
 /*******************/
