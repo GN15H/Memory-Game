@@ -1,3 +1,10 @@
+/*
+Autho: Ing(c) Cristobal Ochoa Cadavid
+Primer BootCamp "piscina-42" UTP sobre fullstack
+Date: 2023-01-13
+Technologic University of Pereira
+*/
+
 //arreglo que contiene la clasificacion de las cargas
 var cartas = ['baltazar', 'gaspar', 'ninodios', 'mula', 'pastor', 'melchor', 'jose', 'maria', 'baltazar', 'gaspar', 'ninodios', 'mula', 'pastor', 'melchor', 'jose', 'maria']
 
