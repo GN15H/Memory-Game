@@ -99,6 +99,7 @@ continuar.addEventListener('click', () => {
         document.querySelector('body').classList.remove('scrollnt')
         continuar.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add('ocultar')
         document.querySelector(`.${descubrir}`).remove()
+        pista.stop()
         aciertos++
         if (aciertos == 8) {
             setTimeout(() => {
