@@ -137,6 +137,7 @@ contenedor.addEventListener('click', (e) => {
         } else {
             if (clase.classList[4] == e.target.parentNode.classList[4]) {
                 console.log("melo")
+                pausar()
                 click = 0
                 clase = null
                 dar_mensaje(e.target.parentNode.classList[4])
