@@ -8,6 +8,7 @@ Technologic University of Pereira
 //arreglo que contiene la clasificacion de las cargas
 var cartas = ['baltazar', 'gaspar', 'ninodios', 'mula', 'pastor', 'melchor', 'jose', 'maria', 'baltazar', 'gaspar', 'ninodios', 'mula', 'pastor', 'melchor', 'jose', 'maria']
 
+//arreglo que contiene los audios
 const pistas = ['./audios/Audio_correcta.mp3', './audios/Audio_incorrecta.mp3', './audios/Audio_final.mp3', './audios/Audio_intro.mp3', './audios/Audio_pareja1.mp3', './audios/Audio_pareja2.mp3', './audios/Audio_pareja3.mp3', './audiosAudio_pareja4.mp3', './audios/Audio_pareja5.mp3', './audios/Audio_pareja6.mp3', './audios/Audio_pareja7.mp3', './audios/Audio_pareja8.mp3']
 
 let click = 0  //registra los clicks del jugador
