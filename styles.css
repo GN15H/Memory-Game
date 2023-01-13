@@ -219,9 +219,10 @@ Technologic University of Pereira
 /*Por ahora*/
 .introduccion_btnComenzar:hover,
 .introduccion_btnContinuar:hover {
-  color: var(--btnComenzar__color);
-  text-decoration: none;
-  top: 0;
+  border-radius: 1px !important; 
+  color: var(--btnComenzar__color) !important;
+  text-decoration: none !important;
+  top: 0 !important;
   -webkit-box-shadow: 0 4px 0 1px var(--btnComenzar__colorSombra),
     0 2px 0 1px var(--btnComenzar__colorSombra),
     0 0px 0 1px var(--btnComenzar__colorSombra);
