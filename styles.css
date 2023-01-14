@@ -348,7 +348,7 @@ Technologic University of Pereira
   grid-template-columns: 60% 1fr;
   flex-direction: row;
   background-color: #E6CE76;
-  background-image: url(./estrellas.png);
+  background-image: url(./imgs/estrellas.png);
   background-size: 700px;
   background-position: center;
   background-repeat: no-repeat;
