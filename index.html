@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<!--
+  Author: Ing(c) Cristobal Ochoa Cadavid
+  Primer BootCamp "piscina-42" UTP sobre fullstack
+  Date: 2023-01-13
+  Techngologic University of Pereira
+  -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Armemos El Pesebre de Navidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-color: rgb(248, 205, 87); background-image: url('./imgs/pattern.png');" class="scrollnt">
+
+    <!--Modales-->
+    <div class="notificacion position-fixed allign-middle d-flex justify-content-center">
+        <div class="allign-items-center">
+            <h1></h1>
+            <img src="./imgs/intro.png" class="w-70 img-fluid">
+            <br>
+            <button id="empezar"
+                class="introduccion_btnComenzar position-relative translate-middle start-50 text-center mt-4"><b>COMENZAR</b></button>
+        </div>
+    </div>
+    <div id="modal1"
+        class="ocultar position-fixed notificacion notificacion1 allign-middle d-flex justify-content-center">
+        <div class="modal_contenedor p-2">
+            <div class="modal_content p-2 bg-warning">
+                <div class="modal_columnas">
+                    <div class="modal_column1">
+                        <img src="./imgs/baltazart.png" class="baltazart"></img>
+                        <img src="./imgs/gaspart.png" class="gaspart"></img>
+                        <img src="./imgs/melchort.png" class="melchort"></img>
+                        <img src="./imgs/pastort.png" class="pastort"></img>
+                        <img src="./imgs/joset.png" class="joset"></img>
+                        <img src="./imgs/mariat.png" class="mariat"></img>
+                        <img src="./imgs/ninodiost.png" class="ninodiost"></img>
+                        <img src="./imgs/mulat.png" class="mulat"></img>
+                    </div>
+                    <div class="modal_column2">
+                        <h2 class="modal_titulo"><b>Sabias que...</b></h2>
+                        <p id="datos">mensaje</p>
+                        <button id="continuar" class="introduccion_btnContinuar"><b>Continuar</b></button>
+                        <img class="copo1" src="./imgs/copo.png">
+                        <img class="copo2" src="./imgs/copo.png">
+                    </div>
+                </div>
+
+                <!--Plantilla utilizada para guardar botones de redes sociales-->
+                <template>
+                    <div class="modal_botonesCompartir">
+                        <span class="modal_compartir">Compartir</span>
+                        <a href="https://twitter.com/intent/tweet?text=&amp;url=https://www.escueladidactica.com/navidad/2022"
+                            target="_blank"><img src="./imgs/twitter.svg" title="Compartir en Twitter"></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.escueladidactica.com/navidad/2022&amp;t="
+                            target="_blank"><img src="./imgs/facebook.svg" title="Compartir en Facebook"></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.escueladidactica.com/navidad/2022"
+                            target="_blank"><img src="./imgs/linkedin.svg" title="Compartir en Linkedin"></a>
+                        <button class="btnCopy" data-clipboard-text="https://www.escueladidactica.com/navidad/2022">
+                            <img src="./imgs/link.svg" title="Copiar el link">
+                            <div class="footerED__linkCopy"></div>
+                        </button>
+                    </div>
+                </template>
+                <!--/Plantilla utilizada para guardar botones de redes sociales-->
+
+            </div>
+        </div>
+    </div>
+    <!--/Modales-->
+
+    <!--Encabezado de la página-->
+    <header style="background-color: rgb(255, 255, 255);">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 p-5">
+                    <img class="p-2 my-auto img-fluid w-70" src="./imgs/logoEscuelDidactica.png">
+                </div>
+                <div class="col text-justify" style="background-color: rgb(226, 234, 241);">
+                    <h3 style="color: rgb(51, 153, 153);"><b>EL PESEBRE DE NAVIDAD</b></h3>
+                    <p>
+                        Como es tradición cada diciembre armamos el pesebre para esperar la llegada del Niño Dios.
+                        Presiona cada tarjeta para descubrir un personaje, concéntrate y encuentra su pareja, así
+                        revelarás un personaje en el pesebre y descubrirás un dato curioso sobre esta tradición de
+                        navidad.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--/Encabezado de la página-->
+
+    <div class="w-60 h-60 text-center p-3" id="memorama">
+        
+        <!--Redes-Sociales-->
+        <div class=" position-fixed start-0 top-50">
+            <a class="start-0 redes" href=""><img src="./imgs/twitter.png"></a><br>
+            <a class="start-0 redes" href=""><img src="./imgs/facebook.png"></a><br>
+            <a class="start-0 redes" href=""><img src="./imgs/linkedin.png"></a><br>
+            <a class="start-0 redes" href=""><img src="./imgs/shared.png"></a>    
+        </div>
+        <!--/Redes-Sociales-->
+
+        <!--Contenedor-de-las-cartas-->
+        <div class="container text-center w-60 h-60 p-5" id="contenedor">
+            <div class="row">
+                <div class="col  img-fluid division"><img id="0" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="1" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="2" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="3" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+            </div>
+            <div class="row ">
+                <div class="col  img-fluid division"><img id="4" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="5" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="6" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="7" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+            </div>
+            <div class="row ">
+                <div class="col  img-fluid division"><img id="8" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="9" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="10" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="11" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+            </div>
+            <div class="row ">
+                <div class="col  img-fluid division"><img id="12" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="13" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="14" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+                <div class="col  img-fluid division"><img id="15" class="img-fluid carta"
+                        src="./imgs/tarjeta_cubierta.png"></div>
+            </div>
+        </div>
+        <!--/Contenedor-de-las-cartas-->
+
+    </div>
+
+    <!--Footer a partir de <700px-->
+    <div class="footer2">
+        <div class="separador"></div>
+
+        <div class="footerED__shared">
+            <span class="footerED__sharedText">Compartir</span>
+            <!-- Botones redes sociales-->
+            <a href="https://twitter.com/intent/tweet?text=&url=https://www.escueladidactica.com/navidad/2022"
+                target="_blank"><img src="./imgs/twitter.png" title="Compartir en Twitter"></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.escueladidactica.com/navidad/2022&t="
+                target="_blank"><img src="./imgs/facebook.png" title="Compartir en Facebook"></a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.escueladidactica.com/navidad/2022"
+                target="_blank"><img src="./imgs/linkedin.png" title="Compartir en Linkedin"></a>
+            <a class="btnShareWhatsApp" href="whatsapp://send?text=https://www.escueladidactica.com/navidad/2022"
+                data-action="share/whatsapp/share"><img src="./imgs/whatsapp.png" /></a>
+            <button class="btnCopy" data-clipboard-text="https://www.escueladidactica.com/navidad/2022">
+                <img src="./imgs/shared.png" title="Copiar el link">
+                <div class="footerED__linkCopy"></div>
+            </button>
+            <!--/Botones redes sociales-->
+        </div>
+
+        <div class="separador"></div>
+
+        <!-- Fin compartir -->
+
+        <div class="footerED__infoMensajeLogoMovil">Somos <a href="https://www.escueladidactica.com/"
+                target="_blank"><img class="footerED__infoMensajeLogoImg" src="./imgs/logoEscuelDidactica.png"
+                    alt="Escuela Didáctica"></a> y te ayudamos a transformar el aprendizaje en experiencias memorables.
+        </div>
+
+        <!---->
+
+    </div>
+    <!--/Footer a partir de <700px-->
+
+    <!--Footer con posición fija-->
+    <footer class="container-fluid footer p-2" style="display: inline-block;">
+        <div class="row" style>
+            <div id="footer_texto" class="footerED__infoMensajeLogo col">Somos <a
+                    href="https://www.escueladidactica.com/" target="_blank"><img id="imagen_footer"
+                        class="footerED__infoMensajeLogoImg my-auto" src="./imgs/logoEscuelDidactica.png"
+                        alt="Escuela Didáctica"></a> y te ayudamos a transformar el aprendizaje en experiencias
+                memorables.</div>
+            <div class="col d-flex justify-content-end allign-middle">
+                <span class="me-1">Siguenos</span> <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https://www.escueladidactica.com/navidad/2022&t="
+                    class="me-1"><img src="./imgs/facebookn.png" class="cont"></a><a href="" class="me-1"><img
+                        src="./imgs/instagramn.png" class="cont"></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.escueladidactica.com/navidad/2022"
+                    class="me-1"><img class="cont" src="./imgs/linkedinn.png"></a><button id="contactanos"
+                    class="h-75 text-white">Contáctanos</button>
+            </div>
+        </div>
+
+    </footer>
+    <!--/Footer con posición fija-->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
