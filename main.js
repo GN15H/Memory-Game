@@ -100,16 +100,16 @@ empezar.addEventListener('click', () => {
 //evento de click para continuar el juego
 continuar.addEventListener('click', () => {
     if (aciertos == 9) {
-        location.reload()
-    } else {
+        location.reload() //recarga la pagina
+    } else { //oprimiendo el boton continuar quitando el modal
         document.querySelector('body').classList.remove('scrollnt')
         continuar.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add('ocultar')
         document.querySelector(`.${descubrir}`).remove()
         console.log('pausar cancion')
         pausar()
         aciertos++
-        if (aciertos == 8) {
-            setTimeout(() => {
+        if (aciertos == 8) { //en caso de haber encontrado todas las parejas
+            setTimeout(() => { //espera un tiempo para mostrar el modal final
                 document.querySelector('.notificacion1').classList.remove('ocultar')
                 document.querySelector('.modal_titulo').textContent = "Armaste tu pesebre"
                 document.getElementById('datos').textContent = "Y junto con la esperanza de la llegada del Niño Dios te deseamos de todo corazón que ese regalo que tanto has anhelado llegue a ti en esta navidad."
@@ -128,15 +128,15 @@ contenedor.addEventListener('click', (e) => {
     if (e.target.classList.contains('true')) { //verifica si el click se hizo en una imagen previamente clickeada
         void (0)
     } else {
-        let pos = parseInt(e.target.id)
+        let pos = parseInt(e.target.id) //obtiene el id de la carta
         let id
-        id = cartas[pos]
+        id = cartas[pos] //obtiene la clase de la carta
         rotar(id, e.target)
         if (click == 0) {
             clase = e.target.parentNode
             console.log(click);
             click = 1
-        } else {
+        } else {// en caso de click = 1
             if (clase.classList[4] == e.target.parentNode.classList[4]) { //verifica si dos cartas son iguales
                 console.log("melo")
                 pausar()
@@ -146,7 +146,7 @@ contenedor.addEventListener('click', (e) => {
                 document.getElementById('datos').textContent = mensaje
                 cancion(pistas[0])
                 pista.play()
-                setTimeout(() => {
+                setTimeout(() => { //espera un momento para mostrar la animación del pesebre
                     document.querySelector('body').classList.add('scrollnt')
                     document.querySelector('.notificacion1').classList.remove('ocultar')
                     descubrir = e.target.parentNode.classList[4] + "t"
@@ -154,8 +154,8 @@ contenedor.addEventListener('click', (e) => {
                     cancion(pistas[aciertos+4])
                     pista.play()
                 }, 800)
-            } else {
-                setTimeout(() => {
+            } else { //en caso de que las cartas no sean iguales
+                setTimeout(() => { //espera un momento para volver a tapar las cartas
                     console.log('melont')
                     clase.classList.remove('true')
                     clase.childNodes[0].classList.remove('rotacion')
